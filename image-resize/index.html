@@ -9,21 +9,37 @@
 <body>
     <header>
         <h1>Image Resize Tool</h1>
-        <a href="../">← Back to Home</a>
+        <a href="../" class="back-link">← Back to Home</a>
     </header>
     <main>
-        <p>Upload an image and resize it to your desired dimensions!</p>
+        <p>Resize your images with ease! Just upload your image, adjust the dimensions, and download your resized image.</p>
         <form id="resizeForm">
-            <label for="image">Select Image:</label>
-            <input type="file" id="image" accept="image/*" required>
-            <label for="width">Width (px):</label>
-            <input type="number" id="width" placeholder="e.g., 300" required>
-            <label for="height">Height (px):</label>
-            <input type="number" id="height" placeholder="e.g., 300" required>
-            <button type="submit">Resize</button>
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="width">Width (px):</label>
+                <input type="number" id="width" placeholder="Auto" disabled>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (px):</label>
+                <input type="number" id="height" placeholder="Auto" disabled>
+            </div>
+            <div class="form-group">
+                <label for="scale">Scale (%):</label>
+                <input type="number" id="scale" value="100" min="10" max="1000" step="10">
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="aspectRatio" checked>
+                    Preserve Aspect Ratio
+                </label>
+            </div>
+            <button type="submit" id="resizeButton" disabled>Resize Image</button>
         </form>
         <canvas id="canvas"></canvas>
-        <a id="downloadLink" style="display: none;">Download Resized Image</a>
+        <a id="downloadLink" class="download-link" style="display: none;">Download Resized Image</a>
     </main>
     <script src="script.js"></script>
 </body>
