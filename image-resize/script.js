@@ -8,28 +8,37 @@ const canvas = document.getElementById('canvas');
 const downloadLink = document.getElementById('downloadLink');
 let originalWidth, originalHeight;
 
+resizeButton.disabled = true; // Initially disable the button
+
 imageInput.addEventListener('change', () => {
     const file = imageInput.files[0];
-    if (!file) return;
+    if (file && file.type.startsWith('image/')) {
+        const img = new Image();
+        const reader = new FileReader();
 
-    const img = new Image();
-    const reader = new FileReader();
+        img.crossOrigin = "anonymous"; // Prevent CORS issues
+        reader.onload = (e) => {
+            img.src = e.target.result;
+        };
 
-    reader.onload = (e) => {
-        img.src = e.target.result;
-    };
+        img.onload = () => {
+            originalWidth = img.width;
+            originalHeight = img.height;
+            widthInput.value = originalWidth;
+            heightInput.value = originalHeight;
 
-    img.onload = () => {
-        originalWidth = img.width;
-        originalHeight = img.height;
-        widthInput.value = originalWidth;
-        heightInput.value = originalHeight;
-        resizeButton.disabled = false;
-        widthInput.disabled = false;
-        heightInput.disabled = false;
-    };
+            // Enable resizing controls and button
+            widthInput.disabled = false;
+            heightInput.disabled = false;
+            resizeButton.disabled = false;
+        };
 
-    reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
+    } else {
+        alert('Please select a valid image file.');
+        imageInput.value = ''; // Reset the input
+        resizeButton.disabled = true;
+    }
 });
 
 scaleInput.addEventListener('input', () => {
@@ -59,6 +68,7 @@ document.getElementById('resizeForm').addEventListener('submit', (e) => {
     const ctx = canvas.getContext('2d');
     const img = new Image();
 
+    img.crossOrigin = "anonymous"; // Prevent CORS issues
     img.onload = () => {
         canvas.width = parseInt(widthInput.value, 10);
         canvas.height = parseInt(heightInput.value, 10);
