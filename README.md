@@ -1,33 +1,46 @@
-# My Tools Website
+# Serverless Tools Project
 
-Welcome to **My Tools Website**! This repository hosts a collection of web-based tools created by [Ratheesh K Pattambi](https://github.com/ratheeshkpattambi).
+## Overview
+A suite of lightweight, serverless, client-side tools hosted as static HTML websites. These tools are focused on usability, privacy, and independence.
 
-## Live Website
+### Key Features
+- **No Login Required**: Access tools without creating accounts.
+- **No Tracking**: Only a simple visitor count.
+- **Ease of Use**: User-friendly interface.
+- **Serverless**: All processing happens locally in the browser.
+- **Independent URLs**: Each tool has its own fully qualified URL.
 
-Visit the live website here: [https://ratheeshkpattambi.github.io/](https://ratheeshkpattambi.github.io/)
+---
 
-## Tools Available
+## Top Tools
 
-The following tools are part of this collection:
+### 1. Image Resizer
+- **URL**: `/tools/image-resizer`
+- **Description**: Resize images to specific dimensions or percentages. Supports JPG, PNG, and WebP.
 
-1. [Image Resize Tool](https://ratheeshkpattambi.github.io/image-resize) - Upload and resize images to custom dimensions.
-2. [Tool 1](https://ratheeshkpattambi.github.io/tool-1) - Placeholder for Tool 1.
-3. [Tool 2](https://ratheeshkpattambi.github.io/tool-2) - Placeholder for Tool 2.
-4. [Tool 3](https://ratheeshkpattambi.github.io/tool-3) - Placeholder for Tool 3.
-5. [Tool 4](https://ratheeshkpattambi.github.io/tool-4) - Placeholder for Tool 4.
-6. [Tool 5](https://ratheeshkpattambi.github.io/tool-5) - Placeholder for Tool 5.
-7. [Tool 6](https://ratheeshkpattambi.github.io/tool-6) - Placeholder for Tool 6.
-8. [Tool 7](https://ratheeshkpattambi.github.io/tool-7) - Placeholder for Tool 7.
-9. [Tool 8](https://ratheeshkpattambi.github.io/tool-8) - Placeholder for Tool 8.
-10. [Tool 9](https://ratheeshkpattambi.github.io/tool-9) - Placeholder for Tool 9.
-11. [Tool 10](https://ratheeshkpattambi.github.io/tool-10) - Placeholder for Tool 10.
+### 2. Video Resizer
+- **URL**: `/tools/video-resizer`
+- **Description**: Resize videos to specific resolutions and formats (e.g., MP4, WebM).
 
-## About
+### 3. Plain Text Editor
+- **URL**: `/tools/plain-text-editor`
+- **Description**: A minimalistic text editor for creating and editing plain text files.
 
-This repository contains static HTML, CSS, and JavaScript files for tools hosted via GitHub Pages. Each tool has its own dedicated page and functionality.
+### 4. YAML Editor
+- **URL**: `/tools/yaml-editor`
+- **Description**: Edit YAML files with syntax highlighting and validation.
 
-## How to Use
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ratheeshkpattambi/ratheeshkpattambi.github.io.git
+## Philosophy
+- **Privacy-First**: No data leaves the browser.
+- **Accessibility**: Tools are lightweight and work on major browsers.
+- **Independence**: Each tool is independent and accessible via its own URL.
+
+---
+
+## Roadmap
+1. Develop core tools (Image Resizer, Video Resizer, Plain Text Editor, YAML Editor).
+2. Design and deploy a home page listing all tools.
+3. Add additional tools based on user feedback.
+4. Optimize for performance and compatibility.
