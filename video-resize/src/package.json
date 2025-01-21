@@ -1,0 +1,17 @@
+{
+  "name": "video-resize",
+  "version": "1.0.0",
+  "description": "A simple video resizer using FFmpeg.wasm and npm.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.11.6"
+  },
+  "devDependencies": {
+    "vite": "^4.5.8"
+  }
+}
